@@ -1,0 +1,55 @@
+/*
+   Spezific styling for salvattore
+   Feel free to edit it as you like
+   More info at http://salvattore.com
+ */
+
+/* Base styles */
+.column {
+    float: left;
+    margin: 10px;
+}
+.size-1of4 {
+    width: 22%;
+}
+.size-1of3 {
+    width: 30%;
+}
+.size-1of2 {
+    width: 45%;
+}
+
+.item {
+   margin-bottom: 20px;
+   border: 1px solid #dddddd;
+   border-radius: 8px;
+   background-color: white;
+}
+.umi_horiz_center {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.umi_center {
+    padding: 5%;
+}
+@media screen and (max-width: 480px){
+	#umi_bento[data-columns]::before {
+		content: '1 .column.size-1of1';
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	#umi_bento[data-columns]::before {
+		content: '2 .column.size-1of2';
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) { 
+	#umi_bento[data-columns]::before {
+		content: '3 .column.size-1of3';
+	}
+}
+@media screen and (min-width: 1200px) {
+	#umi_bento[data-columns]::before {
+		content: '4 .column.size-1of4';
+	}
+}
